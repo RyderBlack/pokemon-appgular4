@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,3 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 }
+
+*/
+
+import { Component } from '@angular/core';
+
+@Component({
+	selector: 'pokemon-app',
+	template: `<h1>Hello, Angular 2 !</h1>`,
+})
+export class AppComponent { }
