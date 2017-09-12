@@ -17,7 +17,7 @@ import { POKEMONS } from './mock-pokemons';
 
 @Component({
   selector: 'pokemon-app',
-  template: '<h1>Pokémons</h1>'
+  templateUrl: '../app/templates/app-template.component.html'
 })
 export class AppComponent implements OnInit {
 
