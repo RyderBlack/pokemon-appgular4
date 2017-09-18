@@ -11,6 +11,7 @@ export class DetailPokemonComponent implements OnInit {
 
   pokemon: Pokemon = null;
 
+  
   constructor(
     private route: ActivatedRoute,
     private router: Router,
