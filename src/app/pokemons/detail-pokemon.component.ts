@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Pokemon } from './pokemon';
 import { PokemonsService } from './pokemons.service'; // on importe le service PokemonsService.
 
@@ -13,6 +13,7 @@ export class DetailPokemonComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private pokemonsService: PokemonsService) {} // on injecte ce service pour pouvoir l'utiliser dans le composant.
 
   ngOnInit(): void {
@@ -20,6 +21,11 @@ export class DetailPokemonComponent implements OnInit {
       let id = +params['id'];
       this.pokemon = this.pokemonsService.getPokemon(id); // on utilise le service pour récupérer un pokémon en fonction de son identifiant.
     });
+  }
+
+  goEdit(pokemon: Pokemon): void {
+    let link = ['/pokemon/edit', pokemon.id];
+    this.router.navigate(link);
   }
 
   goBack(): void {
