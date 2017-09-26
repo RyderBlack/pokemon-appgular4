@@ -10,6 +10,8 @@ import { PokemonRoutingModule } from './pokemons-routing.module';
 import { PokemonsService } from './pokemons.service';
 import { EditPokemonComponent }   from './edit-pokemon.component';
 import { PokemonFormComponent }   from './pokemon-form.component';
+import { PokemonSearchComponent } from './pokemon-search.component';
+import { LoaderComponent }        from './loader.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import { PokemonFormComponent }   from './pokemon-form.component';
     EditPokemonComponent,
     PokemonFormComponent,
     ShadowCardDirective,
-    PokemonTypeColorPipe
+    PokemonTypeColorPipe,
+    PokemonSearchComponent,
+    LoaderComponent
   ],
   providers: [PokemonsService]
 })
