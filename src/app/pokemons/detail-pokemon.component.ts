@@ -28,10 +28,8 @@ export class DetailPokemonComponent implements OnInit {
       .navigate(link);
   }
 
-  goBack() : void {
-    window
-      .history
-      .back();
+  goBack(): void {
+    this.router.navigate(['/pokemon/all']);
   }
 
 }
